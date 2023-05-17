@@ -2,6 +2,7 @@
   "name": "chatgpt",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://leebee2.github.io/react-chatGPT/",
   "scripts": {
     "dev": "next dev",
     "start": "next start",

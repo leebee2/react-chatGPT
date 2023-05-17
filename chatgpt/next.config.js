@@ -1,5 +1,5 @@
 const nextConfig = {
-  basePath: "/react-chatGPT/",
+  basePath: "/react-chatGPT",
   reactStrictMode: true,
 }
 
