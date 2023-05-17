@@ -1,9 +1,9 @@
-import React, { useEffect, useState } from 'react';
 import styles from "../styles/main.module.css";
+import React, { useEffect, useState } from 'react';
 import { TypeAnimation } from 'react-type-animation';
 
 
-const index = () => {
+const Index = () => {
   const [question, setQuestion] = useState('');
   const [textSending, settextSending] = useState([]);
   const [search, setSearch] = useState('');
@@ -65,11 +65,11 @@ const index = () => {
         <div className={styles.chat}>
           <ul>
             {textSending.length > 0 && (
-              textSending.map((chat, index) => {
+              textSending.map((chat, key) => {
                 return (
-                  <li key={index} className={chat.id == "me" ? styles.right : styles.left}>
+                  <li key={key+chat.id} className={chat.id == "me" ? styles.right : styles.left}>
                     <div className={chat.id == "me" ? styles.sender : styles.message}>
-                      {(index == textSending.length - 1 && chat.id == 'ai') ?
+                      {(key == textSending.length - 1 && chat.id == 'ai') ?
                         <TypeAnimation
                           sequence={[chat.message]}
                           speed={50}
@@ -100,4 +100,4 @@ const index = () => {
   );
 };
 
-export default index;
+export default Index;

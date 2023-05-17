@@ -4,14 +4,17 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "build": "next build && next export",
+    "predeploy": "npm run build",
+    "deploy": "touch out/.nojekyll && gh-pages -d out --dotfiles"
   },
   "dependencies": {
     "dotenv": "^16.0.3",
     "eslint": "8.40.0",
     "eslint-config-next": "13.4.2",
+    "eslint-plugin-react-hooks": "^4.6.0",
     "next": "13.4.2",
     "openai": "^3.2.1",
     "react": "^18.2.0",
@@ -19,5 +22,8 @@
     "react-type-animation": "^3.0.1",
     "react-typing-animator": "^5.5.0",
     "typing-effect-reactjs": "^1.4.1"
+  },
+  "devDependencies": {
+    "gh-pages": "^5.0.0"
   }
 }

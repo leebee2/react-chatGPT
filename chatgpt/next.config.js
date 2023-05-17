@@ -1,5 +1,5 @@
-/** @type {import('next').NextConfig} */
 const nextConfig = {
+  basePath: "/react-chatGPT/",
   reactStrictMode: true,
 }
 
